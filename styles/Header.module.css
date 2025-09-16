@@ -1,0 +1,181 @@
+.header {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  width: 100vw;
+  height: 10vh;
+  min-height: 60px;
+  color: #343a40;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(173, 181, 189, 0.3);
+  box-shadow: 
+    0 4px 20px rgba(108, 117, 125, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.headerBtn {
+  padding: 12px 24px;
+  margin: 0 8px;
+  color: #495057;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.headerBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(108, 117, 125, 0.1) 0%, rgba(173, 181, 189, 0.1) 100%);
+  border-radius: 25px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6c757d, #adb5bd);
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerBtn:hover {
+  color: #212529;
+  transform: translateY(-2px);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.headerBtn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.headerBtn:hover::after {
+  width: 70%;
+}
+
+.headerBtn:active {
+  transform: translateY(0);
+}
+
+/* Active/Current page styling */
+.headerBtn.active {
+  color: #212529;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 4px 12px rgba(108, 117, 125, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(173, 181, 189, 0.3);
+}
+
+.headerBtn.active::after {
+  width: 80%;
+  background: linear-gradient(90deg, #495057, #6c757d);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+    height: 8vh;
+    min-height: 50px;
+  }
+  
+  .headerBtn {
+    padding: 8px 12px;
+    margin: 0 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 0.5rem;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 60px;
+  }
+  
+  .headerBtn {
+    padding: 6px 8px;
+    margin: 2px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+  }
+  
+  .headerBtn::after {
+    height: 1px;
+  }
+}
+
+/* Logo space (if you want to add one later) */
+.header::before {
+  content: '';
+  flex: 1;
+  max-width: 50px;
+}
+
+
+
+/* Optional: Add a subtle animation on page load */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+/* Improved focus states for accessibility */
+.headerBtn:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(108, 117, 125, 0.3),
+    0 4px 12px rgba(108, 117, 125, 0.15);
+}
+
+/* Subtle gradient border effect */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(173, 181, 189, 0.5), transparent);
+}
