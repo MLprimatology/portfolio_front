@@ -42,12 +42,7 @@ function Accueil() {
           Docteur en primatologie reconverti en développeur d'applications web &
           mobile (full stack JS)
         </h2>
-        <button onClick={handleClickButtonPorteFolio} className={styles.button}>
-          Voir mon portfolio
-        </button>
-        <button onClick={handleClickButtonAbout} className={styles.button}>
-          Qui suis-je ?
-        </button>
+
         <div className={styles.socials}>
           <FontAwesomeIcon
             icon={faLinkedin}
