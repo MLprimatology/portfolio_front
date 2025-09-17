@@ -2,9 +2,6 @@
   width: 500px;
   height: 550px;
   cursor: pointer;
-  margin: 0 auto;
-  max-width: 100%;
-  transition: all 0.3s ease;
 }
 
 .card {
@@ -15,6 +12,9 @@
   transition: transform 0.8s ease;
   border-radius: 5%;
 }
+
+
+
 
 .card.isFlipped {
   transform: rotateY(180deg);
@@ -37,11 +37,13 @@
   overflow: hidden;
 }
 
+
 .cardBack {
   transform: rotateY(180deg);
   padding: 1rem;
   text-align: center;
 }
+
 
 .stackLogos {
   display: flex;
@@ -50,472 +52,21 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 0.5rem;
 }
 
 .stackLogos img {
   border-radius: 4px;
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
 }
 
-.stackLogos img:hover {
-  transform: scale(1.1);
-}
-
-.icon {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.icon:hover {
+.icon:hover{
   color: grey;
-  transform: scale(1.2);
+  transform: scale(1.2)
 }
 
 .desc {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  line-height: 1.5;
-  padding: 0 1rem;
-  text-align: center;
+  font-size: 1.2rem;
 }
 
-.titleCard {
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
-  font-weight: 600;
-  text-align: center;
-  padding: 0 1rem;
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
-/* Enhanced Responsive Design */
-
-/* Extra Large Screens (1400px and up) */
-@media (min-width: 1400px) {
-  .scene {
-    width: 550px;
-    height: 600px;
-  }
-  
-  .cardFront,
-  .cardBack {
-    padding: 2rem;
-  }
-  
-  .stackLogos {
-    gap: 12px;
-    margin-top: 15px;
-  }
-  
-  .stackLogos img {
-    max-width: 50px;
-    max-height: 50px;
-  }
-  
-  .desc {
-    font-size: 1.3rem;
-  }
-  
-  .titleCard {
-    font-size: 1.75rem;
-  }
-}
-
-/* Large Screens (1200px to 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .scene {
-    width: 500px;
-    height: 550px;
-  }
-  
-  .stackLogos img {
-    max-width: 45px;
-    max-height: 45px;
-  }
-}
-
-/* Medium-Large Screens (992px to 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .scene {
-    width: 450px;
-    height: 500px;
-  }
-  
-  .cardBack {
-    padding: 1.5rem;
-  }
-  
-  .stackLogos {
-    gap: 10px;
-  }
-  
-  .stackLogos img {
-    max-width: 40px;
-    max-height: 40px;
-  }
-  
-  .desc {
-    font-size: 1.1rem;
-  }
-  
-  .titleCard {
-    font-size: 1.4rem;
-  }
-}
-
-/* Medium Screens (768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .scene {
-    width: 400px;
-    height: 450px;
-    margin: 1rem auto;
-  }
-  
-  .cardFront,
-  .cardBack {
-    border-width: 1.5px;
-  }
-  
-  .cardBack {
-    padding: 1.25rem;
-  }
-  
-  .stackLogos {
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .stackLogos img {
-    max-width: 35px;
-    max-height: 35px;
-  }
-  
-  .desc {
-    font-size: 1rem;
-    padding: 0 0.75rem;
-  }
-  
-  .titleCard {
-    font-size: 1.3rem;
-    padding: 0 0.75rem;
-  }
-}
-
-/* Small-Medium Screens (576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
-  .scene {
-    width: 350px;
-    height: 400px;
-    margin: 1rem auto;
-  }
-  
-  .cardFront,
-  .cardBack {
-    border-width: 1px;
-    border-radius: 8px;
-  }
-  
-  .card {
-    border-radius: 8px;
-  }
-  
-  .cardBack {
-    padding: 1rem;
-  }
-  
-  .stackLogos {
-    gap: 6px;
-    margin-top: 6px;
-  }
-  
-  .stackLogos img {
-    max-width: 30px;
-    max-height: 30px;
-  }
-  
-  .desc {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    padding: 0 0.5rem;
-  }
-  
-  .titleCard {
-    font-size: 1.2rem;
-    padding: 0 0.5rem;
-  }
-  
-  .icon:hover {
-    transform: scale(1.15);
-  }
-}
-
-/* Small Screens (481px to 575px) */
-@media (min-width: 481px) and (max-width: 575px) {
-  .scene {
-    width: 320px;
-    height: 380px;
-    margin: 1rem auto;
-  }
-  
-  .cardFront,
-  .cardBack {
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
-  }
-  
-  .card {
-    border-radius: 10px;
-  }
-  
-  .cardBack {
-    padding: 0.875rem;
-  }
-  
-  .stackLogos {
-    gap: 5px;
-    margin-top: 5px;
-  }
-  
-  .stackLogos img {
-    max-width: 28px;
-    max-height: 28px;
-  }
-  
-  .desc {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-  
-  .titleCard {
-    font-size: 1.1rem;
-    padding: 0 0.5rem;
-  }
-}
-
-/* Extra Small Screens (320px to 480px) */
-@media (min-width: 320px) and (max-width: 480px) {
-  .scene {
-    width: 300px;
-    height: 350px;
-    margin: 0.75rem auto;
-  }
-  
-  .cardFront,
-  .cardBack {
-    border-radius: 12px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card {
-    border-radius: 12px;
-  }
-  
-  .cardBack {
-    padding: 0.75rem;
-  }
-  
-  .stackLogos {
-    gap: 4px;
-    margin-top: 4px;
-    padding: 0 0.25rem;
-  }
-  
-  .stackLogos img {
-    max-width: 25px;
-    max-height: 25px;
-  }
-  
-  .desc {
-    font-size: 0.85rem;
-    line-height: 1.3;
-    padding: 0 0.25rem;
-  }
-  
-  .titleCard {
-    font-size: 1rem;
-    padding: 0 0.25rem;
-  }
-  
-  .icon:hover {
-    transform: scale(1.1);
-  }
-}
-
-/* Very Small Screens (below 320px) */
-@media (max-width: 319px) {
-  .scene {
-    width: 280px;
-    height: 320px;
-    margin: 0.5rem auto;
-  }
-  
-  .cardFront,
-  .cardBack {
-    border-radius: 15px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  }
-  
-  .card {
-    border-radius: 15px;
-  }
-  
-  .cardBack {
-    padding: 0.5rem;
-  }
-  
-  .stackLogos {
-    gap: 3px;
-    margin-top: 3px;
-  }
-  
-  .stackLogos img {
-    max-width: 22px;
-    max-height: 22px;
-  }
-  
-  .desc {
-    font-size: 0.8rem;
-    line-height: 1.25;
-    padding: 0 0.25rem;
-  }
-  
-  .titleCard {
-    font-size: 0.95rem;
-    padding: 0 0.25rem;
-  }
-}
-
-/* Landscape Orientation on Mobile */
-@media (max-height: 500px) and (orientation: landscape) and (max-width: 900px) {
-  .scene {
-    width: 300px;
-    height: 250px;
-    margin: 0.5rem auto;
-  }
-  
-  .cardBack {
-    padding: 0.5rem;
-    justify-content: space-around;
-  }
-  
-  .stackLogos {
-    gap: 4px;
-    margin-top: 2px;
-  }
-  
-  .stackLogos img {
-    max-width: 20px;
-    max-height: 20px;
-  }
-  
-  .desc {
-    font-size: 0.75rem;
-    line-height: 1.2;
-  }
-  
-  .titleCard {
-    font-size: 0.9rem;
-  }
-}
-
-/* Touch-friendly adjustments for mobile devices */
-@media (pointer: coarse) {
-  .scene {
-    cursor: default;
-  }
-  
-  .card {
-    cursor: default;
-  }
-  
-  .icon {
-    min-width: 44px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .stackLogos img {
-    min-width: 30px;
-    min-height: 30px;
-  }
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  .card {
-    transition: none;
-  }
-  
-  .icon,
-  .stackLogos img {
-    transition: none;
-  }
-  
-  .icon:hover,
-  .stackLogos img:hover {
-    transform: none;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .cardFront,
-  .cardBack {
-    border-width: 3px;
-    border-color: #000;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .desc,
-  .titleCard {
-    color: #000;
-    text-shadow: none;
-  }
-}
-
-/* Dark mode support (if applicable) */
-@media (prefers-color-scheme: dark) {
-  .cardFront,
-  .cardBack {
-    background: #1a1a1a;
-    border-color: #444;
-    color: #fff;
-  }
-  
-  .desc,
-  .titleCard {
-    color: #fff;
-  }
-  
-  .icon:hover {
-    color: #ccc;
-  }
-}
-
-/* Container queries support (for modern browsers) */
-@container (max-width: 400px) {
-  .scene {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 10/11;
-  }
-}
-
-/* Prevent layout shift during flip animation */
-.scene::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 0;
-  padding-bottom: 110%; /* 550/500 ratio */
-}
-
-@media (max-width: 768px) {
-  .scene::before {
-    padding-bottom: 115%; /* Adjusted ratio for mobile */
-  }
+.titleCard{
+  font-size: 1.5rem;
 }
