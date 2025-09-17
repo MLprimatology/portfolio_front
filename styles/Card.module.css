@@ -1,6 +1,6 @@
 .scene {
-  width: 500px;
-  height: 550px;
+  width: 450px;
+  height: 500px;
   cursor: pointer;
 }
 
@@ -12,8 +12,6 @@
   transition: transform 0.8s ease;
   border-radius: 5%;
 }
-
-
 
 
 .card.isFlipped {
