@@ -5,22 +5,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import ModalMail from "./ModalMail";
 
 function Accueil() {
-  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const handleClickButtonPorteFolio = () => {
-    router.push("/project");
-  };
-
-  const handleClickButtonAbout = () => {
-    router.push("/about");
-  };
 
   const handleClickSocial = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
