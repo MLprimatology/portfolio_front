@@ -1,10 +1,39 @@
 .these {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f5f5f9 0%, #49484a 100%);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f5f9 0%, #49484a 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (below 1024px) */
+@media (max-width: 1024px) {
+  .these {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+  .these {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .these {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Extra small devices (below 360px) */
+@media (max-width: 360px) {
+  .these {
+    padding: 1rem 0.5rem;
+  }
 }

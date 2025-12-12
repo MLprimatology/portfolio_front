@@ -6,9 +6,8 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-background: linear-gradient(135deg, #f5f5f9 0%, #49484a 100%);
-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
+  background: linear-gradient(135deg, #f5f5f9 0%, #49484a 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card {
@@ -16,7 +15,7 @@ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   max-width: 70%;
-  height:50%;
+  height: 50%;
   padding: 2.5rem;
   text-align: center;
   animation: fadeInUp 0.6s ease-in-out;
@@ -75,5 +74,101 @@ font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets and smaller (below 1024px) */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 85%;
+    padding: 2rem;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem;
+  }
+
+  .card {
+    max-width: 95%;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .socials {
+    gap: 1.2rem;
+  }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.75rem;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .socials {
+    gap: 1rem;
   }
 }

@@ -30,9 +30,7 @@
   width: 90%;
   max-height: 85vh;
   overflow-y: auto;
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.15),
-    0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.1);
   animation: slideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
 }
@@ -58,7 +56,7 @@
 }
 
 .modal h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -98,9 +96,7 @@
 .form textarea:focus {
   border-color: #667eea;
   background: white;
-  box-shadow: 
-    0 0 0 3px rgba(102, 126, 234, 0.1),
-    0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
   transform: translateY(-1px);
 }
 
@@ -141,16 +137,12 @@
 .button:first-child {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  box-shadow: 
-    0 4px 15px rgba(102, 126, 234, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button:first-child:hover {
   transform: translateY(-2px);
-  box-shadow: 
-    0 6px 20px rgba(102, 126, 234, 0.4),
-    0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .button:first-child:active {
@@ -187,16 +179,16 @@
     width: 95%;
     margin: 1rem;
   }
-  
+
   .modal h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .formButtons {
     flex-direction: column;
   }
-  
+
   .button {
     width: 100%;
   }
@@ -211,9 +203,23 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-  20%, 40%, 60%, 80% { transform: translateX(2px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
 }
 
 /* Amélioration de l'accessibilité */
@@ -225,5 +231,128 @@
   .form textarea {
     animation: none;
     transition: none;
+  }
+}
+
+/* ========== ADDITIONAL RESPONSIVE DESIGN ========== */
+
+/* Tablets (below 1024px) */
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 550px;
+    width: 85%;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+  .modal {
+    padding: 2rem;
+    width: 90%;
+    max-height: 90vh;
+  }
+
+  .modal h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices (below 480px) */
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.25rem;
+    width: 98%;
+    margin: 0.5rem;
+  }
+
+  .modal h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .modal h3::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  .form {
+    gap: 0.875rem;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .form textarea {
+    min-height: 100px;
+  }
+
+  .button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}
+
+/* Extra small devices (below 360px) */
+@media (max-width: 360px) {
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .button {
+    padding: 0.65rem 0.875rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal {
+    max-height: 95vh;
+    padding: 1rem;
+  }
+
+  .modal h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .form {
+    gap: 0.75rem;
+  }
+
+  .form textarea {
+    min-height: 80px;
   }
 }

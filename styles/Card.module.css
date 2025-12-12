@@ -13,7 +13,6 @@
   border-radius: 5%;
 }
 
-
 .card.isFlipped {
   transform: rotateY(180deg);
 }
@@ -35,13 +34,11 @@
   overflow: hidden;
 }
 
-
 .cardBack {
   transform: rotateY(180deg);
   padding: 1rem;
   text-align: center;
 }
-
 
 .stackLogos {
   display: flex;
@@ -56,15 +53,126 @@
   border-radius: 4px;
 }
 
-.icon:hover{
+.icon:hover {
   color: grey;
-  transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .desc {
   font-size: 1.2rem;
 }
 
-.titleCard{
+.titleCard {
   font-size: 1.5rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (below 1024px) */
+@media (max-width: 1024px) {
+  .scene {
+    width: 380px;
+    height: 430px;
+  }
+
+  .titleCard {
+    font-size: 1.35rem;
+  }
+
+  .desc {
+    font-size: 1.1rem;
+  }
+
+  .stackLogos {
+    gap: 6px;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+  .scene {
+    width: 320px;
+    height: 380px;
+  }
+
+  .cardFront,
+  .cardBack {
+    padding: 0.75rem;
+  }
+
+  .titleCard {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .stackLogos {
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .stackLogos img {
+    max-width: 32px;
+    max-height: 32px;
+  }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .scene {
+    width: 280px;
+    height: 340px;
+  }
+
+  .cardFront,
+  .cardBack {
+    padding: 0.5rem;
+    border-width: 1px;
+  }
+
+  .titleCard {
+    font-size: 1.1rem;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .stackLogos {
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .stackLogos img {
+    max-width: 28px;
+    max-height: 28px;
+  }
+
+  .icon:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Extra small devices (below 360px) */
+@media (max-width: 360px) {
+  .scene {
+    width: 260px;
+    height: 320px;
+  }
+
+  .titleCard {
+    font-size: 1rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+  }
+
+  .stackLogos img {
+    max-width: 24px;
+    max-height: 24px;
+  }
 }

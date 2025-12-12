@@ -1,43 +1,131 @@
-
-
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.species{
-    font-style: italic;
+.species {
+  font-style: italic;
 }
 
 .title {
-    margin: auto;
-    text-align: center;
-    border: none;
-    padding: 20px;
-    margin-top: 50px;
+  margin: auto;
+  text-align: center;
+  border: none;
+  padding: 20px;
+  margin-top: 50px;
 }
 
-.subtitle{
-    font-weight:400;
+.subtitle {
+  font-weight: 400;
 }
 
-.subj{
-    margin: auto;
-    text-align: center;
-    font-size: 1.5rem;
+.subj {
+  margin: auto;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-.resume{
+.resume {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: justify;
+  margin: 70px;
+  padding: 50px;
+  font-size: 1.5rem;
+  max-width: 70%;
+  background: white;
+}
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (below 1024px) */
+@media (max-width: 1024px) {
+  .resume {
+    max-width: 80%;
+    margin: 50px 20px;
+    padding: 40px;
+    font-size: 1.35rem;
+  }
+
+  .subj {
+    font-size: 1.35rem;
+  }
+
+  .title {
+    padding: 18px;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 1.75rem;
+  }
+
+  .subj {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+
+  .resume {
+    max-width: 90%;
+    margin: 40px 15px;
     padding: 30px;
-    border-radius:10px;
-    box-shadow:5px 5px 15px rgba(0,0,0,0.3) ;
-    text-align: justify;
-    margin: 70px;
-    padding: 50px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .title {
+    padding: 12px;
+    margin-top: 20px;
     font-size: 1.5rem;
-    max-width: 70%;
-    background: white;
+  }
+
+  .subj {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .resume {
+    max-width: 95%;
+    margin: 30px 10px;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+}
+
+/* Extra small devices (below 360px) */
+@media (max-width: 360px) {
+  .title {
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.25rem;
+  }
+
+  .subj {
+    font-size: 1rem;
+  }
+
+  .resume {
+    max-width: 98%;
+    margin: 20px 5px;
+    padding: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
