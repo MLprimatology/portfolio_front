@@ -6,7 +6,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import ModalMail from "../ModalMail";
+
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleClickSocial = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -94,6 +98,7 @@ export default function Footer() {
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   size="2x"
+                  onClick={() => setIsModalOpen(true)}
                   className={styles.socialsIcon}
                 />
               </a>
@@ -101,6 +106,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {isModalOpen && <ModalMail setIsModalOpen={setIsModalOpen} />}
     </footer>
   );
 }
